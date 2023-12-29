@@ -1,11 +1,7 @@
 import styles from './loginbox.module.css'
 import { AiFillLock } from 'react-icons/ai';
-import { FormEvent, createRef, useState } from 'react';
-import { loginuserprops } from '../../Types/Loginprops';
+import { createRef, useState } from 'react';
 import Loading from '../Loading';
-import authApi from '../../api/auth';
-import authStorage from '../../auth/storage';
-import LoginSuccessFul from '../LoginSuccessful';
 
 
 function LoginBox() {
@@ -13,37 +9,8 @@ function LoginBox() {
   const passwordRef = createRef<HTMLInputElement>();
   const passwordComfirmationRef = createRef<HTMLInputElement>();
   const [loading, setLoading] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
 
-      const userobj:loginuserprops = {
-      email: emailRef.current?.value ?? "",
-      password: passwordRef.current?.value ?? "",
-      passwordComfirmation: passwordComfirmationRef.current?.value ?? ""
-    };
-    setLoading(true);
-    const { response, error } = await authApi.login(userobj.email, userobj.password, userobj.passwordComfirmation);
-    if (error) {
-      setLoading(false);
-      setErrorMsg(error);
-      return
-    };
-    setErrorMsg('');
-    setLoading(false);
-    authStorage.setToken(response.result.token);
-    const {userName,email} = authStorage.getUser();
-    console.log(userName,email);
-
-    // setLoading(true);
-    // const result = await authApi.login(userobj.email, userobj.password, userobj.passwordComfirmation);
-    // if (!result.ok) return setLoginFailed(true);
-    // setLoginFailed(false);
-    // setLoading(false);
-    // console.log(result);
-   
-  }
 
   return (
     <>

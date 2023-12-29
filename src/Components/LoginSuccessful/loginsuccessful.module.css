@@ -1,0 +1,14 @@
+.container{
+    position: absolute;
+    top:0;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 70px;
+    display: flex;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    padding:20;
+    color:white;
+    background-color: #1fce68d2;
+}

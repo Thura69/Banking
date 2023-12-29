@@ -1,0 +1,13 @@
+.kbz_subscribe {
+    /* flex flex-col gap-6 py-12 rounded-md border-[1px] bg-[#015EB9] */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 10px;
+    border: 1px solid #E6EDF3;
+    background-color: #015EB9;
+    background-image: url("../../../public/assets/kbz-bg.svg");
+    background-repeat: no-repeat;
+}

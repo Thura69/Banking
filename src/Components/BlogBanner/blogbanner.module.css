@@ -1,0 +1,15 @@
+/* flex flex-col relative bg-[#063A78] py-12 text-center gap-4 */
+.blog_banner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #063A78;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    gap: 1rem;
+    background-image: url("../../../public/assets/blog-bg-banner.svg");
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+}

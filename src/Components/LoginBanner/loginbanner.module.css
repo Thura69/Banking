@@ -1,0 +1,14 @@
+.login_banner{
+        /* height: 550px;
+        padding: 5rem 12rem; */
+        height: 550px;
+        padding:5rem 12rem;
+        margin-top: 2px;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        background-image: url("../../../public/assets/login.jpeg");
+        background-size: cover;
+        background-position: bottom;
+        overflow: hidden;
+}

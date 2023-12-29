@@ -1,0 +1,7 @@
+.footer{
+    background-image: url('../../../public/assets/footer-bg.svg');
+    background-repeat: no-repeat;
+    background-color: #063A78;
+    padding:5rem 12rem 2rem 12rem;
+    background-position: bottom;
+}
